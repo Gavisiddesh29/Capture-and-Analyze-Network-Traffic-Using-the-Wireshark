@@ -1,0 +1,52 @@
+**Wireshark Network Traffic Capture – Short Steps**
+
+1. **Install Wireshark**
+
+   * Download from: [https://www.wireshark.org/download.html](https://www.wireshark.org/download.html)
+
+2. **Start Capturing**
+
+   * Open Wireshark.
+   * Select your active network interface (Wi-Fi, Ethernet, etc.).
+   * Click the "Start Capturing" icon.
+
+3. **Generate Network Traffic**
+
+   * Visit a few websites (e.g., google.com, example.com).
+   * Run `ping google.com` in Command Prompt.
+   * Stop the ping using `Ctrl + C`.
+
+4. **Stop Capturing**
+
+   * Wait \~1 minute, then click the red stop button in Wireshark.
+
+5. **Filter Captured Packets**
+
+   * Use protocol filters in the top bar:
+
+     * `http` for HTTP
+     * `dns` for DNS
+     * `tcp` for TCP
+     * `icmp` for ping
+
+6. **Identify 3 Protocols**
+
+   * Check the "Protocol" column and note at least three:
+
+     * **TCP**: Seen with SYN and HTTPS (Port 443)
+     * **DNS**: Domain lookups using UDP (Port 53)
+     * **ICMP**: Ping requests and replies
+
+7. **Export as .pcap**
+
+   * Go to **File > Export Specified Packets**.
+   * Save with `.pcap` extension.
+
+8. **Summary**
+
+   * **TCP**: Secure web traffic (HTTPS)
+   * **DNS**: Resolves domain names
+   * **UDP**: Used by DNS
+   * **ICMP**: Ping diagnostics
+
+
